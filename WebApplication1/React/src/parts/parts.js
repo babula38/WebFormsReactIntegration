@@ -8,7 +8,10 @@ class Parts extends Component {
         super(props);
 
         this.state = {
-            parts: []
+            parts: [],
+            Id: 0,
+            Name: '',
+            Price: 0
         };
     }
 
@@ -52,6 +55,7 @@ class Parts extends Component {
     }
 
     AddData() {
+        console.dir(this.state);
         fetch("WebForm1.aspx/PostValue", {
             method: 'POST',
             headers: {
@@ -60,7 +64,9 @@ class Parts extends Component {
             },
             body: JSON.stringify({
                 page: "Cool", method: "F1", data: {
-                    Id: 1, Name: "B"
+                    Id: this.state.Id,
+                    Name: this.state.Name,
+                    Price: this.state.Price
                 }
             })
         })
@@ -83,6 +89,25 @@ class Parts extends Component {
                 });
     }
 
+    setId(e) {
+        console.dir(e.target.value);
+        this.setState({
+            Id: e.target.value
+        })
+    }
+    setName(e) {
+        console.dir(e.target.value);
+        this.setState({
+            Name: e.target.value
+        })
+    }
+    setPrice(e) {
+        console.dir(e.target.value);
+        this.setState({
+            Price: e.target.value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -90,8 +115,11 @@ class Parts extends Component {
                 <ul>
                     {this.state.parts.map(part => <li key={part.Id}><ItemInfo item={part} /></li>)}
                 </ul>
-                <ul><button onClick={this.AddData}>AddData</button></ul>
-                <ul><button onClick={this.retrieveData}>retrieveData</button></ul>
+                <ul>Id <input type="text" name="Id" onChange={e => this.setId(e)} /></ul>
+                <ul> Name<input type="text" name="Name" onChange={e => this.setName(e)} /></ul>
+                <ul> Price<input type="text" name="Price" onChange={e => this.setPrice(e)} /></ul>
+                <ul><button onClick={() => this.AddData()}>AddData</button></ul>
+                <ul><button onClick={() => this.retrieveData()}>retrieveData</button></ul>
             </div >
         );
     }

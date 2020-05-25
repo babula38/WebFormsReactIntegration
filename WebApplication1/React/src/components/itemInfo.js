@@ -1,6 +1,10 @@
 ﻿import React, { Component } from "react";
 
 class ItemInfo extends Component {
+    componentWillReceiveProps(props) {
+        //this.setState({ isChecked: props.isChecked });
+        //Console.log('Chile');
+    };
     render() {
         return (
             <div>

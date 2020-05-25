@@ -7,6 +7,8 @@
     <title></title>
 </head>
 <body>
+    <form runat="server" id="main">
+    </form>
     <div id="root"></div>
     <script>
         window.baseUrl = '<%= ResolveUrl ("~") %>';
