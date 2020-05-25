@@ -1,4 +1,4 @@
-﻿<%@ Page Title="React WebForm 1" Language="C#" MasterPageFile="~/Site.Master" 
+﻿<%@ Page Title="React WebForm 1" Language="C#" 
     AutoEventWireup="true" CodeBehind="PartsWebForm.aspx.cs" Inherits="WebApplication1.PartsWebForm" 
 %>
 
