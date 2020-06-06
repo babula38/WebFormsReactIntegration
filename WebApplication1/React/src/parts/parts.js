@@ -1,5 +1,5 @@
 ﻿import React, { Component } from "react";
-import { hot } from "react-hot-loader/root";
+// import { hot } from "react-hot-loader/root";
 
 import ItemInfo from "components/itemInfo";
 
@@ -125,4 +125,5 @@ class Parts extends Component {
     }
 }
 
-export default hot(Parts);
+// export default hot(Parts);
+export default Parts;

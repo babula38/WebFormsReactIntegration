@@ -3,15 +3,15 @@ const webpack = require("webpack");
 
 module.exports = {
     entry: {
-        parts: "./src/parts/index.js",
-        products: "./src/products/index.js"
+        parts: "./src/parts/index.js"
+        //products: "./src/products/index.js"
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "babel-loader"
+                loader: ["react-hot-loader/webpack", "babel-loader"]
             },
             {
                 test: /\.css$/,
@@ -46,7 +46,8 @@ module.exports = {
         contentBase: path.join(__dirname, "../"),
         port: 3000,
         publicPath: "http://localhost:3000/React/dist",
-        hotOnly: true,
+        hot: true,
+        // hotOnly: true,
         open: 'Chrome',
         openPage: 'React/public/index.html'
     },

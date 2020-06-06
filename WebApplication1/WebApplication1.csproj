@@ -186,7 +186,6 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Compile Include="WebForm2.aspx.b.cs" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebApplication1.wpp.targets">
       <SubType>Designer</SubType>
@@ -259,13 +258,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx.b.cs</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.b.cs.designer.cs">
-      <DependentUpon>WebForm2.aspx.b.cs</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
